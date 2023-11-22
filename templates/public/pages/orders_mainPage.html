@@ -1,0 +1,37 @@
+{% extends 'public/base.html' %}
+
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/mainPage.css' %}">
+{% endblock %}
+
+{% block searching-title %}
+    <h1 class="searching-title">Маркетплейс для подработки</h1>
+{% endblock %}
+
+{% block search-bar %}
+    <div class="searching-form">
+        <input type="text" placeholder="Поиск">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+{% endblock %}
+
+
+{% block main_header %}
+    <h1 class="main_header">Каталог заказов</h1>
+{% endblock %}
+
+
+{% block prompt_text %}
+    <div class="prompt_text">
+        Более 200 видов деятельности и более тысячи заказчиков — предлагай свои услуги или находи заказы
+        с подходящей ставкой, удобным графиком и локацией. Выбирай комфортные условия и работай спокойно
+        вместе с сервисом для внештатного персонала ПодJOBка!
+    </div>
+{% endblock %}
+
+{% block contentPage %}
+    {% include 'public/inc/catalogue.html' %}
+{% endblock %}

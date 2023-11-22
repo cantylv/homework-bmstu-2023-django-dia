@@ -3,16 +3,16 @@
 <div class="container">
     <div class="menu">
 
-        <a href="{% url 'orders' %}" class="menu-logo">
+        <a href="{% url 'home' %}" class="menu-logo">
             <img src="{% static 'svg/logo.svg' %}" alt="logo">
         </a>
 
         <nav id="nav" class="menu-nav">
             <ul class="menu-nav-list">
-                <a href="{% url 'orders' %}" class="menu-logo">
+                <a href="{% url 'home' %}" class="menu-logo">
                     <img src="{% static 'svg/logo.svg' %}" alt="logo">
                 </a>
-                <li class="menu-nav-list-item"><a href="{% url 'orders' %}" class="menu-nav-list-item-link">Найти заказ</a></li>
+                <li class="menu-nav-list-item"><a href="{% url 'home' %}" class="menu-nav-list-item-link">Найти заказ</a></li>
                 <li class="menu-nav-list-item"><a href="{% url 'executors' %}" class="menu-nav-list-item-link">Найти исполнителя</a>
                 </li>
             </ul>

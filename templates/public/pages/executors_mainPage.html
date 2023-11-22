@@ -1,0 +1,35 @@
+{% extends 'public/base.html' %}
+
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/mainPage.css' %}">
+{% endblock %}
+
+{% block searching-title %}
+    <h1 class="searching-title">Найдем исполнителя</h1>
+{% endblock %}
+
+{% block search-bar %}
+    <div class="searching-form">
+        <input type="text" placeholder="Поиск">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+{% endblock %}
+
+
+{% block main_header %}
+    <h1 class="main_header">Исполнители по категориям</h1>
+{% endblock %}
+
+
+{% block prompt_text %}
+    <div class="prompt_text">
+        Более 250 видов деятельности — выберите исполнителя с подходящим опытом, графиком и локацией.
+    </div>
+{% endblock %}
+
+{% block contentPage %}
+    {% include 'public/inc/catalogue.html' %}
+{% endblock %}
