@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static 'css/media.css' %}">
 </head>
 
-<body> <!--grid-page-layout ИСПОЛЬЗУЕТСЯ ДЛЯ СТРАНИЦ С GRID LAYOUT-->
+<body>
 
 <header>
     {% include 'public/inc/header.html' %}
@@ -26,16 +26,12 @@
         {% block searching-title %} {% endblock %}
         {% block search-bar %}{% endblock %} <!--не стал выносить в templates/inc, так как мало используется-->
     </div>
+
     <div class="content container">
         {% block main_header %} {% endblock %}
         {% block prompt_text %} {% endblock %}
         {% block contentPage %} {% endblock %}
     </div>
-
-    <!--Шаблон для страниц с услугами-->
-    {% block orders%}
-
-    {% endblock %}
 
 </main>
 
