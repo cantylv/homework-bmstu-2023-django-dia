@@ -1,0 +1,54 @@
+{% extends 'public/base.html' %}
+
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/persInfo.css' %}">
+{% endblock %}
+
+{% block contentPage %}
+    <div class="card-full">
+        <div class="card-full-userblock">
+            <h1>Калинина Светлана</h1>
+            <img src="{% static 'img/user1.jpg' %}" alt="ava" class="card-full-ava">
+        </div>
+
+        <div class="portfolio">
+            <div class="portfolio-header">
+                <div class="portfolio-header-job">Тайный покупатель</div>
+                <div class="portfolio-header-town">г. Казань, Татарстан Респ</div>
+                <div class="portfolio-header-sexAndAge">Женский, 48 лет</div>
+            </div>
+            <div class="portfolio-mainPart">
+                <div class="">Выполнено заказов:</div>
+                <div class="">7</div>
+
+                <div class="">Дополнительные виды деятельности:</div>
+                <div class="">Уборщик</div>
+
+                <div class="">Города для выезда:</div>
+                <div class="">Москва</div>
+
+                <div class="">Водительские права:</div>
+                <div class="">Есть</div>
+
+                <div class="">Иностранные языки:</div>
+                <div class="">Английский</div>
+
+                <div class="">Личная медицинская книжка:</div>
+                <div class="">Есть</div>
+
+                <div class="">Сертификат о вакцинации (от COVID‑19):</div>
+                <div class="">Есть</div>
+
+                <div class="">Противопоказания к работе:</div>
+                <div class="">Нет</div>
+
+                <div class="">График занятости:</div>
+                <div class="">1/3</div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
