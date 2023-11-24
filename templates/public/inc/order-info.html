@@ -1,0 +1,37 @@
+{% load static %}
+
+
+<div class="card-full-about">
+    <h1>{{ order.owner }}</h1>
+    <img src="{% static order.ownerPicture %}" alt="ava" class="card-full-ava">
+</div>
+
+<div class="portfolio">
+    <div class="portfolio-header">
+        <div class="portfolio-header-shortInfo">{{ order.ownerShortInfo }}</div>
+        <div class="portfolio-header-town">{{ order.ownerPlace }}</div>
+    </div>
+    <div class="portfolio-mainPart">
+        <div class="">Номер заказа:</div>
+        <div class="">{{ order.id }}</div>
+
+        <div class="">Период работ:</div>
+        <div class="">{{ order.period }}</div>
+
+        <div class="">Вид деятельности:</div>
+        <div class="">{{ order.job }}</div>
+
+        <div class="">Место выполнения:</div>
+        <div class="">{{ order.place }}</div>
+
+        <div class="">Договор:</div>
+        <div class="">{{ order.contract }}</div>
+
+        <div class="">Дополнительные условия:</div>
+        <div class="">{{ order.condition }}</div>
+
+    </div>
+
+    <div class="portfolio-footer-title">Описание работ:</div>
+    <div class="portfolio-footer-about">{{ order.aboutDeal }}</div>
+</div>

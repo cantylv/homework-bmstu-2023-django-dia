@@ -1,0 +1,39 @@
+{% load static %}
+
+
+{% for order in orders %}
+
+    <div class="card-order">
+
+        <div class="card-order-about">
+            <div class="card-order-about-title">{{ order.title }}
+            </div>
+            <img src="{% static order.ownerPicture %}" alt="ava" class="card-order-about-ava">
+        </div>
+
+        <div class="card-order-short-info">
+
+            <div class="card-order-short-info-number">Номер заказа:</div>
+            <div class="card-order-short-info-number-ans">{{ order.id }}</div>
+
+            <div class="card-order-short-info-period">Период работы:</div>
+            <div class="card-order-short-info-period-ans">{{ order.period }}</div>
+
+            <div class="card-order-short-info-job">Вид деятельности:</div>
+            <div class="card-order-short-info-job-ans">{{ order.job }}</div>
+
+            <div class="card-order-short-info-place">Место выполнения:</div>
+            <div class="card-order-short-info-place-ans">{{ order.place }}</div>
+
+            <div class="card-order-short-info-salary">Cтоимость работы (RUB):</div>
+            <div class="card-order-short-info-salary-ans">{{ order.salary }}</div>
+
+        </div>
+
+        <a href="{% url 'order' order_id=order.id %}">
+            <button class="card-order-btn-submit">Подробнее</button>
+        </a>
+
+    </div>
+
+{% endfor %}

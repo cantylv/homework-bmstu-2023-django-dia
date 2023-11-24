@@ -1,0 +1,17 @@
+{% extends 'public/base.html' %}
+
+{% load static %}
+
+{% block main_header %}
+    <span class="order-title">{{ order.title }}</span>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/persInfo.css' %}">
+{% endblock %}
+
+{% block contentPage %}
+    <div class="card-full">
+        {% include 'public/inc/order-info.html' %}
+    </div>
+{% endblock %}

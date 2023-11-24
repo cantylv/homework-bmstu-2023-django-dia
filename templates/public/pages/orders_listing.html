@@ -8,108 +8,18 @@
 {% endblock %}
 
 {% block searching-title %}
-    <h1 class="searching-title">Каталог</h1>
+    <h1 class="searching-title">Каталог заказов</h1>
 {% endblock %}
 
 {% block search-bar %}
-    <div class="searching-form">
-        <input type="text" placeholder="Поиск">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-
-    <div class="collapse-sort">
-        <span class="label-sorting">Сортировка: </span>
-        <select id="sort-options">
-            <option value="name">По имени</option>
-            <option value="price">По стоимости</option>
-        </select>
-        <button class="sort-button card-order-btn-submit">Показать результат</button>
-    </div>
+    {% include 'public/inc/searching-bar.html' %}  <!--Нужно научить search bar искать и сохранять значения-->
 {% endblock %}
 
 {% block contentPage %}
     <div class="orders">
-        <div class="card-order">
-
-            <div class="card-order-userblock">
-                <div class="card-order-userblock-username">Работа с товаром в торговом зале обувного магазина,
-                    мерчандайзинг торгового зала.
-                </div>
-                <img src="{% static 'img/user1.jpg' %}" alt="ava" class="card-order-userblock-ava">
-            </div>
-
-            <div class="card-order-short-info">
-
-                <div class="card-order-short-info-job">Номер заказа:</div>
-                <div class="card-order-short-info-job-ans">241866</div>
-
-                <div class="card-order-short-info-age">Период работы:</div>
-                <div class="card-order-short-info-age-ans">01.11.23-24.11.23</div>
-
-                <div class="card-order-short-info-citship">Вид деятельности:</div>
-                <div class="card-order-short-info-citship-ans">Мерчандайзер</div>
-
-                <div class="card-order-short-info-town">Место выполнения:</div>
-                <div class="card-order-short-info-town-ans">г. Москва</div>
-
-                <div class="card-order-short-info-salary">Cтоимость работы (RUB):</div>
-                <div class="card-order-short-info-salary-ans">20000</div>
-
-            </div>
-
-            <a href="#!">
-                <button class="card-order-btn-submit">Подробнее</button>
-            </a>
-
-        </div>
-
-
-        <div class="card-order">
-
-            <div class="card-order-userblock">
-                <div class="card-order-userblock-username">Работа с товаром в торговом зале обувного магазина,
-                    мерчандайзинг торгового зала.
-                </div>
-                <img src="{% static 'img/user1.jpg' %}" alt="ava" class="card-order-userblock-ava">
-            </div>
-
-            <div class="card-order-short-info">
-
-                <div class="card-order-short-info-job">Номер заказа:</div>
-                <div class="card-order-short-info-job-ans">241866</div>
-
-                <div class="card-order-short-info-age">Период работы:</div>
-                <div class="card-order-short-info-age-ans">01.11.23-24.11.23</div>
-
-                <div class="card-order-short-info-citship">Вид деятельности:</div>
-                <div class="card-order-short-info-citship-ans">Мерчандайзер</div>
-
-                <div class="card-order-short-info-town">Место выполнения:</div>
-                <div class="card-order-short-info-town-ans">г. Москва</div>
-
-                <div class="card-order-short-info-salary">Cтоимость работы (RUB):</div>
-                <div class="card-order-short-info-salary-ans">20000</div>
-
-            </div>
-
-            <a href="#!">
-                <button class="card-order-btn-submit">Подробнее</button>
-            </a>
-
-        </div>
-
+        {% include 'public/inc/card-order.html' %}
     </div>
 
-    <div class="filter">
-        <div class="sorting-controls">
-            <span class="sort-label">Фильтры</span>
-            <span class="label-sorting">Отсортировать:</span>
-            <select id="sort-options">
-                <option value="name">По имени</option>
-                <option value="price">По стоимости</option>
-            </select>
-            <button class="sort-button card-order-btn-submit">Показать результат</button>
-        </div>
-    </div>
+    {% include 'public/inc/filter.html' %}  <!--Нужно научить filter работать-->
 
 {% endblock %}
