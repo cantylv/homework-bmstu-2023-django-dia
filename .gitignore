@@ -1,5 +1,0 @@
-*.sqlite3
-.DS_Store
-webapp/static
-*.page
-.idea
