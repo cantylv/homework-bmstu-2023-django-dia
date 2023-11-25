@@ -8,75 +8,107 @@ CATALOGS = [
     {
         'id': 1,
         "name": "Доставка и логистика",
+        "url_name": "delivery",
         "src": "svg/orders/delivery.svg"
     },
     {
         'id': 2,
         "name": "Торговля",
+        "url_name": "trading",
         "src": "svg/orders/trading.svg"
     },
     {
         "id": 3,
         "name": "Услуги и прочее",
+        "url_name": "other",
         "src": "svg/orders/other.svg"
     },
     {
         "id": 4,
         "name": "Менеджмент, продажи, администрирование",
+        "url_name": "management",
         "src": "svg/orders/management.svg"
     },
     {
         "id": 5,
         "name": "Строительство, ремонт, производство",
+        "url_name": "construction",
         "src": "svg/orders/construction.svg"
     },
 
     {
         "id": 6,
         "name": "СМИ",
+        "url_name": "media",
         "src": "svg/orders/media.svg"
     },
 
     {
         "id": 7,
         "name": "Разработка ПО",
+        "url_name": "it",
         "src": "svg/orders/it.svg"
     },
 
     {
         "id": 8,
         "name": "Проектирование",
+        "url_name": "engineering",
         "src": "svg/orders/engineering.svg"
     },
 
     {
         "id": 9,
         "name": "Дизайн",
+        "url_name": "design",
         "src": "svg/orders/design.svg"
     },
 
     {
         "id": 10,
         "name": "Финансы и бухгалтерия",
+        "url_name": "finance",
         "src": "svg/orders/finance.svg"
     },
 
     {
         "id": 11,
         "name": "HoReCa",
+        "url_name": "horeca",
         "src": "svg/orders/horeca.svg"
     },
     {
         "id": 12,
         "name": "Маркетинг",
+        "url_name": "marketing",
         "src": "svg/orders/marketing.svg"
     },
     {
         "id": 13,
         "name": "Красота и здоровье",
+        "url_name": "beauty",
         "src": "/svg/orders/beauty.svg"
     },
 ]
+
+
+CATALOGS_NAME_ID = {
+    'delivery': 1,
+    'trading': 2,
+    'other': 3,
+    'management': 4,
+    'construction': 5,
+    'media': 6,
+    'it': 7,
+    'engineering': 8,
+    'design': 9,
+    'finance': 10,
+    'horeca': 11,
+    'marketing': 11,
+    'beauty': 11,
+
+}
+
 
 ORDERS = [
     {
@@ -94,7 +126,7 @@ ORDERS = [
         'contract': f'contract{i}',
         'condition': f'no',
         'aboutDeal': f'you need to do it{i}'
-    } for i in range(150)
+    } for i in range(500)
 ]
 
 CONTRACTORS = [

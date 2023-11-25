@@ -32,6 +32,7 @@
         {% block prompt_text %} {% endblock %}
         {% block contentPage %} {% endblock %}
     </div>
+    {% block paginator %} {% endblock %}
 
 </main>
 
@@ -39,8 +40,9 @@
     {% include 'public/inc/footer.html' %}
 </footer>
 
-<script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+
 <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/paginator.js' %}"></script>
 </body>
 
 </html>

@@ -12,10 +12,7 @@
 {% endblock %}
 
 {% block search-bar %}
-    <div class="searching-form">
-        <input type="text" placeholder="Поиск">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
+    {% include 'public/inc/search-bar.html' %}
 {% endblock %}
 
 
@@ -34,6 +31,6 @@
 
 {% block contentPage %}
     <div class="orders">
-        {% include 'public/inc/catalog_orders.html' %}
+        {% include 'public/inc/catalog.html' %}
     </div>
 {% endblock %}
