@@ -1,0 +1,28 @@
+{% load static %}
+
+<div class="container">
+    <div class="menu">
+
+        <a href="{% url 'home' %}" class="menu-logo">
+            <img src="{% static 'svg/logo.svg' %}" alt="logo">
+        </a>
+
+        <nav id="nav" class="menu-nav">
+            <ul class="menu-nav-list">
+                <a href="{% url 'home' %}" class="menu-logo">
+                    <img src="{% static 'svg/logo.svg' %}" alt="logo">
+                </a>
+                <li class="menu-nav-list-item"><a href="{% url 'home' %}" class="menu-nav-list-item-link">Найти заказ</a></li>
+                <li class="menu-nav-list-item"><a href="{% url 'executors' %}" class="menu-nav-list-item-link">Найти исполнителя</a>
+                </li>
+            </ul>
+
+            <button id="nav-btn" class="menu-nav-bar">
+                <img id="nav-btn-img" src="{% static 'svg/bar.svg' %}" alt="bar">
+            </button>
+        </nav>
+
+        <!--Here will be user's part: ava + buttons-->
+
+    </div>
+</div>

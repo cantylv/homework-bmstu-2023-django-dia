@@ -1,0 +1,25 @@
+{% extends 'public/base.html' %}
+
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/ordsAndContrs.css' %}">
+{% endblock %}
+
+{% block searching-title %}
+    <h1 class="searching-title">Каталог исполнителей</h1>
+{% endblock %}
+
+{% block search-bar %}
+    {% include 'public/inc/search-bar.html' %}
+{% endblock %}
+
+{% block contentPage %}
+    <div class="orders">
+        {% include 'public/inc/card-executor.html' %}
+    </div>
+
+    {% include 'public/inc/filter.html' %}
+
+{% endblock %}
