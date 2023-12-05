@@ -1,8 +1,0 @@
-{% load static %}
-
-{% for catalog in catalogs %}
-    <a class="order" href="{% url url_alias %}?catalog={{ catalog.url_name }}&page={{ page }}">
-        <img src="{% static catalog.src %}" class="icon" alt="icon_{{ catalog.name }}">
-        <div class="text">{{ catalog.name }}</div>
-    </a>
-{% endfor %}

@@ -1,0 +1,21 @@
+{% extends 'public/base.html' %}
+
+{% block main_header %}
+    <h1 class="main_header">Каталог заказов</h1>
+{% endblock %}
+
+
+{% block prompt_text %}
+    <div class="prompt_text">
+        Более 200 видов деятельности и более тысячи заказчиков — предлагай свои услуги и согласовывай их с
+        модератором. Выбирай комфортные условия и работай спокойно вместе с сервисом для внештатного персонала ПодJOBка!
+    </div>
+{% endblock %}
+
+{% block contentPage %}
+    <div class="services">
+        {% for service in services %}
+            {% include "public/inc/service_card.html" %}
+        {% endfor %}
+    </div>
+{% endblock %}

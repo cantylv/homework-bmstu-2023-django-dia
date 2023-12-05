@@ -1,0 +1,33 @@
+{% load static %}
+
+
+<div class="card-service">
+
+    <div class="card-service-img">
+        <img src="{% static service.img %}" alt="employee" class="card-service-img-employee">
+    </div>
+
+    <div class="card-service-data">
+        <div class="card-service-about-title">{{ service.job }}</div>
+
+        <div class="card-service-short-info-about">Описание</div>
+        <div class="card-service-short-info-about-ans">{{ service.about|truncatechars:30 }}</div>
+
+        <div class="card-service-short-info-sex">Пол:</div>
+        {% if service.sex == 0 %}
+            <div class="card-service-short-info-sex-ans">Женский</div>
+        {% elif service.sex == 1 %}
+            <div class="card-service-short-info-sex-ans">Мужской</div>
+        {% elif service.sex == 2 %}
+            <div class="card-service-short-info-sex-ans">Не важно</div>
+        {% endif %}
+
+    </div>
+
+
+    <a href="{% url 'service' service_id=service.id %}">
+        <button class="card-service-btn-submit btn">Подробнее</button>
+    </a>
+
+</div>
+

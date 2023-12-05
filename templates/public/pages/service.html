@@ -1,0 +1,50 @@
+{% extends 'public/base.html' %}
+
+{% load static %}
+
+{% block contentPage %}
+
+    <a href="{% url 'home'%}">
+        <button class="btn-home btn">Hазад</button>
+    </a>
+
+    <div class="card-service-page2">
+
+        <div class="card-service-img-page2">
+            <img src="{% static service.img %}" alt="employee" class="card-service-img-employee-page2">
+        </div>
+
+        <div class="card-service-data">
+            <div class="card-service-about-title">{{ service.job }}</div>
+
+            <div class="card-service-short-info-about">Описание</div>
+            <div class="card-service-short-info-about-ans">{{ service.about }}</div>
+
+            <div class="card-service-short-info-age">Возрастные ограничения:</div>
+            <div class="card-service-short-info-age-ans">{{ service.age }}+</div>
+
+            <div class="card-service-short-info-sex">Пол:</div>
+            {% if service.sex == 0 %}
+                <div class="card-service-short-info-sex-ans">Женский</div>
+            {% elif service.sex == 1 %}
+                <div class="card-service-short-info-sex-ans">Мужской</div>
+            {% elif service.sex == 2 %}
+                <div class="card-service-short-info-sex-ans">Не важно</div>
+            {% endif %}
+
+            <div class="card-service-short-info-rus">Наличие русского гражданства:</div>
+            {% if service.rus_passport == 0 %}
+                <div class="card-service-short-info-rus-ans">Не обязательно</div>
+            {% elif service.rus_passport == 1 %}
+                <div class="card-service-short-info-rus-ans">Обязательно</div>
+            {% endif %}
+
+            <div class="card-service-short-info-ins">Наличие медицинской страховки:</div>
+            {% if service.insurance  == 0 %}
+                <div class="card-service-short-info-ins-ans">Не обязательно</div>
+            {% elif service.insurance  == 1 %}
+                <div class="card-service-short-info-ins-ans">Обязательно</div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
