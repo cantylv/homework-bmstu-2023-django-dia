@@ -4,11 +4,21 @@
     <h1 class="main_header">Каталог заказов</h1>
 {% endblock %}
 
-
 {% block prompt_text %}
     <div class="prompt_text">
         Более 200 видов деятельности и более тысячи заказчиков — предлагай свои услуги и согласовывай их с
         модератором. Выбирай комфортные условия и работай спокойно вместе с сервисом для внештатного персонала ПодJOBка!
+    </div>
+{% endblock %}
+
+{% block filter %}
+    <div class="filter">
+        <form id="filterForm" action="{% url 'home'%}" method="get">
+            <label for="filter_input">Фильтр:</label>
+            <input type="text" name="filter" id="filter_input" placeholder="Введите критерий фильтрации"
+                  {% if filter_criteria != None %} value={{ filter_criteria }} {% endif %}>
+            <button type="submit" class="btn-apply-search">Применить</button>
+        </form>
     </div>
 {% endblock %}
 

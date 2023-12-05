@@ -3,8 +3,14 @@ from webapp.database import SERVICES
 
 
 def home(req):
+    services = SERVICES
+    filter_criteria = req.GET.get('filter', None)
+    if filter_criteria == 'профессия':
+        services = sorted(services, key=lambda x: x['job'].lower())
+
     return render(req, 'public/pages/index.html', {
-        'services': SERVICES
+        'services': services,
+        'filter_criteria': filter_criteria
     })
 
 
